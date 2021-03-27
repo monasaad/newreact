@@ -1,13 +1,277 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* make it centerd in a page */
+  margin: auto; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 2vmin;
+  max-width: 1200px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+p{
+  color: #C4C4C4;
+  font-size: 0.9rem;
+}
+
+h3{
+  font-size: 0.9rem;
+  color: #03BFCA;
+}
+
+/* btns */
+.btn {
+  font-family: 'Red Hat Display', sans-serif;
+  border: 1px solid #03BFCA;
+  border-radius: 5px;
+  color: #03BFCA;
+  padding: 8px 20px;
+  margin: 3px;
+  font-weight: 700;
+}
+
+.blue {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: #03BFCA;
+  color: black;
+}
+
+.main_btn{
+  font-family: 'Red Hat Display', sans-serif;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-weight: 700;
+  background-color: #03BFCA;
+  color: black;
+  margin:10px auto; 
+  width: 125px;
+  text-transform: uppercase;
+}
+
+.main_btn:hover{
+  background-color: black;
+  color: #03BFCA;
+
+}
+
+/************ header *************/
+header{
+  font-family: 'Red Hat Display', sans-serif;
+  padding-top: 20px;
+  /* max-width: 1000px; */
+}
+
+.nav_logo {
+  float: left;
+  margin-left: 30px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Red Hat Display', sans-serif;
+  text-decoration: line-through;
+  font-size: 1.4rem;
+}
+
+.nav_links{
+  font-family: 'Red Hat Display', sans-serif;
+  margin-left: 20px;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+
+}
+.nav_link {
+  font-family: 'Red Hat Display', sans-serif;
+
+  padding: 10px;
+}
+
+.nav_btn {
+  float: right;   
+  margin: 10px 30px; 
+}
+
+.section_one {
+  min-height: 700px;
+  background-image: url('background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+
+  /* This is what makes the background image rescale based
+  on the container’s size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+  while the background image is loading */
+  background-color: #464646;
+}
+
+
+.Xlarge_heading {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 6vmin;
+  max-width: 900px;
+  margin: 200px 150px;
+}
+
+.large_heading {
+  font-weight: bolder;
+  font-family: 'Lato', sans-serif;
+  font-size: 5vmin;
+}
+
+.para{
+  margin: 20px 120px;
+  margin-bottom: 70px;
+}
+
+/* section 2 */
+
+.section_two {
+  margin: 150px 55px;
+  margin-bottom: 100px;
+  background-color: lin;
+
+}
+.figures{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 50px;
+}
+
+.left_figures{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.figure{
+  margin-bottom: 40px;
+}
+
+.left_text{
+  text-align: left;
+}
+
+.img_blue{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #03BFCA;
+  margin-right: 20px;
+  vertical-align: top;
+  margin-top: 20px;
+}
+/* footer */
+
+.footer_links{
+  padding-bottom: 15px; 
+}
+
+.footer_link{
+  padding: 0px 20px;
+  /* display: inline; */
+}
+
+.footer_icons{
+  display: flexbox;
+  flex-direction: row;
+  /* border: 4px solid rgb(82, 45, 45); */
+  /* align-items: baseline; */
+  /* justify-content: space-evenly; */
+  padding:5px;
+  padding-bottom: 15px; 
+}
+
+.footer_icon{
+  margin:15px;
+}
+
+.list{
+  display: none;
+}
+@media screen and (max-width: 1135px) {
+  .figures{
+    display: block;
+  }
+  .figure{
+    display: block;
+    margin: 20px auto;
+  }
+  .img_blue{
+    display: block;
+    margin: 2px auto;
+  }
+
+  .left_text{
+    margin: 5px auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  
+  .nav_link, .btn, .blue{
+    display: none;
+  }
+  .list{
+    display: inline;
+  }
+  .Xlarge_heading{
+    margin: 150px 50px;
+  }
+  .section_two{
+    margin: 100px 50px;
+  }
+  .para{
+    margin: 10px 1px;
+    margin-bottom: 20px;
+  }
+  .figures{
+    display: block;
+  }
+  .figure{
+    display: block;
+    margin: 20px auto;
+  }
+  .img_blue{
+    display: block;
+    margin: 2px auto;
+  }
+
+  .left_text{
+    margin: 5px auto;
+    text-align: center;
+  }
+}
+
+.inline{
+  display: inline-block;
+}
+
+.block{
+  display: block;
+}
+
+.section_three{
+  background-color: #F6F6F6;
 }
